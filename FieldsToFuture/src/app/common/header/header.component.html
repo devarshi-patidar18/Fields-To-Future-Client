@@ -1,0 +1,34 @@
+<div class="header" [ngClass]="{'scrolled': isScrolled}">
+  
+      <div class="logo-container">
+        <img src="../../../assets/fields_to_future_main_logo_image.ico" alt="Logo" class="logo">
+      </div>
+      <div class="menu" >
+        <ul class="menu-list" *ngIf="!isMobile">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">More</a></li> 
+        </ul>
+        <div class="search-container">
+          <input (click)="searchGlobal($event)" type="text" placeholder="Search">
+        </div>
+        <div class="menu-mobile" *ngIf="menuVisible && isMobile">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">More</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hamburger" [ngClass]="{'scrolled': isScrolled}" (click)="toggleMenu()" *ngIf="isMobile">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+  
+      
+  </div>
+
+  
