@@ -1,1 +1,158 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    color: #333;
+  }
+  
+  /* Flex container to center login */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Card styling for login form */
+  .login-card {
+    margin-top: 5%;
+    background-color: white;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;  /* Ensure the card doesn't grow too large */
+    text-align: center;
+    border: 2px solid #e5e5e5;
+  }
+  
+  /* Title of the login form */
+  .login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50; /* Green color */
+    margin-bottom: 20px;
+  }
+  
+  /* Input field group styling */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Label styling for inputs */
+  .input-group label {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Input field styles */
+  .input-group input {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #4CAF50; /* Green focus */
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  
+  /* For small screens (mobile phones) */
+  @media (max-width: 768px) {
+    .login-card {
+      padding: 30px;
+      width: 100%;  /* Take up more width on smaller screens */
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .login-title {
+      font-size: 1.5rem; /* Smaller title font on mobile */
+    }
+  
+    .input-group input {
+      padding: 12px; /* Add some padding for better touch interaction */
+      font-size: 1rem;
+      height: 10px;
+    }
+  
+    button {
+      padding: 12px 20px; /* Make the button larger and more tappable */
+    }
+  }
+  
+  /* For very small screens (extra small mobile screens) */
+  @media (max-width: 480px) {
+    .login-title {
+      font-size: 1.3rem;
+    }
+  
+    .input-group input {
+      padding: 12px; /* Larger padding for mobile users */
+      height: 10px;
+    }
+  
+    button {
+      padding: 15px 25px; /* Make the button more accessible on small screens */
+    }
+  }
+  
+  
+
+.topSpanGreen{
+    width: 100%;
+    height: 30px;
+    background: radial-gradient(#ffffff8f, #c1c5be6e, #49ff0000);
+    color: #282450;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topSpanGreen a{
+    cursor: pointer;
+}
+
+.menu-mobile>li{
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 3px;
+}
+

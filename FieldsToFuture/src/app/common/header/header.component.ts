@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink,RouterOutlet,FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -14,6 +16,7 @@ export class HeaderComponent {
   menuVisible: boolean = false;
   isScrolled: boolean = false;
   searchPage: boolean = false;
+  searchPageActive: boolean = false;
 
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
@@ -21,11 +24,15 @@ export class HeaderComponent {
     }
   }
 
+  showDialog() {
+    this.searchPageActive = true;
+  }
+
   searchGlobal(event: any): void {
     this.searchPage = true;
     console.log(event.target.value);
   }
-  
+
   @HostListener('window:resize', ['$event'])
   onResize(event?: Event): void {
     if (typeof window !== 'undefined') {
@@ -34,7 +41,7 @@ export class HeaderComponent {
         this.isMobile = target.innerWidth <= 768;
       }
     }
-    
+
   }
 
   @HostListener('window:scroll', [])

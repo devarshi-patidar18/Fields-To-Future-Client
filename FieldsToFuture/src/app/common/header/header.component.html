@@ -10,12 +10,13 @@
           <li><a href="#">Contact</a></li>
           <li><a href="#">More</a></li> 
         </ul>
-        <div class="search-container">
-          <input (click)="searchGlobal($event)" type="text" placeholder="Search">
+        <div class="search-container" >
+          <input 
+           (click)="searchGlobal($event);searchPageActive=true" type="text" placeholder="Search">
         </div>
         <div class="menu-mobile" *ngIf="menuVisible && isMobile">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a routerLink="/">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">More</a></li>
@@ -30,5 +31,3 @@
   
       
   </div>
-
-  

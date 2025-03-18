@@ -1,75 +1,20 @@
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
-<p>login works!</p>
-<br>
-<p>login works!</p>
+<div class="login-container">
+    <div class="login-card">
+      <h2 class="login-title">Login</h2>
+      <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" [(ngModel)]="username" name="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        </div>
+        <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      </form>
+      <div class="register-link" style="margin-top: 10px;">
+        New User? &nbsp;<a routerLink="/signup">Register!</a>
+      </div>
+    </div>
+  </div>
+  

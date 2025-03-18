@@ -1,4 +1,9 @@
 <app-header></app-header>
-<div class="routing-container">
-  <router-outlet></router-outlet>
+<div class="" style="top: 115px; position: relative;">
+  <div class="topSpanGreen" *ngIf="!this.datastore.isUserLoggedIn">
+    <span>
+      <a [routerLink]="['/login']">Login/Register</a>
+    </span>
+  </div>
+    <router-outlet class="routing-container"></router-outlet>
 </div>

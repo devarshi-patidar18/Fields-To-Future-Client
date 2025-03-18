@@ -1,14 +1,23 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./common/header/header.component";
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './common/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { DataStoreService } from './services/data-store.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, CommonModule,LoginComponent,RouterLink,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'FieldsToFuture';
+  constructor(public datastore:DataStoreService) {}
+
+  // ngOnInit(){
+  //   this.datastore.isUserLoggedIn = true;
+  // }
+
 }
