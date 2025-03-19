@@ -4,18 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { DataStoreService } from '../../services/data-store.service';
 import { CreateGroupComponent } from "../../group/create-group/create-group.component";
 import { QuoteComponent } from "../../common/quote/quote.component";
+import { GroupCardComponent } from "../../group/group-card/group-card.component";
 
 @Component({
   selector: 'app-user-details',
   standalone: true,
-  imports: [CommonModule, FormsModule, CreateGroupComponent, QuoteComponent],
+  imports: [CommonModule, FormsModule, CreateGroupComponent, QuoteComponent, GroupCardComponent],
   templateUrl: './user-details.component.html',
   styleUrl: './user-details.component.css',
 })
 export class UserDetailsComponent {
+
+  isMyGroupsOpen:boolean = false;
+
   constructor(public dataStore:DataStoreService){}
 
   todayDate:Date = new Date();
-  
+
+  openMyGroups() {
+    this.isMyGroupsOpen = !this.isMyGroupsOpen;
+    }
+
   
 }

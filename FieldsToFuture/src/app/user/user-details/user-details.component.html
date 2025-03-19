@@ -6,8 +6,37 @@
         <h2>Total Interest <h3 style="color: green;margin-top: 10px;">{{1200>0?"+":"-"}}{{ 1200 | currency:'INR' }}</h3>
         </h2>
         <p>Track contributions, expenses, and reports in one place.</p>
-        <button>Get Started &rarr;</button>
-        <app-quote [todaysQuote]='this.dataStore.getTodaysQuote()'></app-quote>
+        <!-- <button>Get Started &rarr;</button> -->
+        <app-quote [todaysQuote]='this.dataStore.getTodaysQuote()' [date]="todayDate"></app-quote>
+    </div>
+
+
+    <div class="hero">
+        <button (click)="openMyGroups()">My Groups<i *ngIf="!this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
+                class="far fa-arrow-alt-circle-down fa-lg"></i>
+            <i *ngIf="this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
+                class="far fa-times-circle fa-lg"></i></button>
+
+        <div *ngIf="this.isMyGroupsOpen" style="margin-top: 5px;">
+            <app-group-card></app-group-card>
+            <app-group-card></app-group-card>
+            <app-group-card></app-group-card>
+            <app-group-card></app-group-card>
+        </div>
+    </div>
+
+    <div class="hero">
+        <button (click)="openMyGroups()">My Loans<i *ngIf="!this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
+                class="far fa-arrow-alt-circle-down fa-lg"></i>
+            <i *ngIf="this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
+                class="far fa-times-circle fa-lg"></i></button>
+
+        <div *ngIf="this.isMyGroupsOpen" style="margin-top: 5px;">
+            <app-group-card></app-group-card>
+            <app-group-card></app-group-card>
+            <app-group-card></app-group-card>
+            <app-group-card></app-group-card>
+        </div>
     </div>
 
     <!-- <div class="features">
@@ -18,6 +47,6 @@
 
     <div class="cta" id="bottom">
         <h2>Request to join a Fund Group</h2>
-        <button>Create</button>
+        <button>Continue</button>
     </div>
 </div>
