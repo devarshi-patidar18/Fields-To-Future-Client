@@ -27,6 +27,8 @@ body {
     text-align: center;
     padding: 50px;
     background: linear-gradient( #5569ce, white);
+    mask: radial-gradient(34px at top right, #0000 100%, #000);
+    /* mask: radial-gradient(34px at top left, #0000 100%, #000); */
 
 }
 .hero h1 {

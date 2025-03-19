@@ -1,9 +1,9 @@
 <app-header></app-header>
 <div class="" style="top: 115px; position: relative;">
-  <div style="justify-content: center; width: 100%; display: flex; color: blue; text-decoration:underline;" *ngIf="!this.datastore.isUserLoggedIn">
+  <div  >
     
       <!-- <a [routerLink]="['/login']">Login/Register</a> -->
-      <app-user-nav  [routerLink]="['/login']"></app-user-nav>
+      <app-user-nav [userName]="'Devarshi Patidar'" [totalInvestment]="500000"></app-user-nav>
     
   </div>
     <router-outlet class="routing-container"></router-outlet>

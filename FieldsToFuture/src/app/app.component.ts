@@ -17,8 +17,8 @@ import { UserNavComponent } from './user/user-nav/user-nav.component';
 export class AppComponent {
   constructor(public datastore:DataStoreService) {}
 
-  // ngOnInit(){
-  //   this.datastore.isUserLoggedIn = true;
-  // }
+  ngOnInit(){
+    this.datastore.isUserLoggedIn = true;
+  }
 
 }

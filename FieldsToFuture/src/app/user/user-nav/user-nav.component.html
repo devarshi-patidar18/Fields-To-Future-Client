@@ -1,3 +1,23 @@
-<div>
-    Click here to login
+<div *ngIf="!dataStore.isUserLoggedIn"
+    style="justify-content: center; width: 95%; display: flex; color: rgb(0, 0, 6); text-decoration:underline;">
+    <a routerLink="/login">Click here to login</a>
 </div>
+
+<nav class="navbar" *ngIf="dataStore.isUserLoggedIn" (click)="this.goToDashboard()">
+    <div *ngIf="!logoutConfirmation" class="nav-left">
+      <span class="username">{{ userName }}</span>
+      <span class="investment">Total Investment: ${{ totalInvestment }}</span>
+    </div>
+    <div *ngIf="!logoutConfirmation" class="nav-right">
+      <!-- <button (click)="goToDashboard()">Dashboard</button> -->
+      <button class="logout" (click)="this.logoutConfirmation=true"><i class="fas fa-sign-out-alt"></i></button>
+    </div>
+    <div *ngIf="logoutConfirmation" style="justify-content: center;display: flex;">
+        <span style="width: 170px;">Do you realy want to logout?</span>
+        <!-- <span >Yes</span> -->
+        <button class="logout" style="padding: 0;width: 70px;margin-right: 5px;" (click)="this.islogout=true;logout()">Yes</button>
+        <!-- <span >No</span> -->
+        <button class="logout" style="padding: 0;width: 70px;" (click)="this.logoutConfirmation=false">No</button>
+    </div>
+  </nav>
+  

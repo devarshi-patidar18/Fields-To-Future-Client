@@ -3,6 +3,7 @@ import { HomeComponent } from './common/home/home.component';
 import { LoginComponent } from './common/login/login.component';
 import { SearchpageComponent } from './common/searchpage/searchpage.component';
 import { SignupComponent } from './common/signup/signup.component';
+import { UserDetailsComponent } from './user/user-details/user-details.component';
 
 export const routes: Routes = [{
     path: '',
@@ -24,6 +25,11 @@ export const routes: Routes = [{
     component: SignupComponent,
     title: 'Registration page',
   },
+  {
+    path: 'userdetails',
+    component:UserDetailsComponent,
+    title: 'User Dashboard'
+  }
 ];
 
   export default routes;
