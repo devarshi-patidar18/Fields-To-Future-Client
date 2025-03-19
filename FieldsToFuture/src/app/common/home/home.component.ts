@@ -11,6 +11,6 @@ export class HomeComponent {
   @ViewChild('bottom', { static: false }) bottomElement!: ElementRef;
 
   gettingStarted() {
-    this.bottomElement?.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('bottom')?.scrollIntoView({ behavior: 'smooth' });
   }
 }
