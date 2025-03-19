@@ -4,6 +4,7 @@ import { LoginComponent } from './common/login/login.component';
 import { SearchpageComponent } from './common/searchpage/searchpage.component';
 import { SignupComponent } from './common/signup/signup.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
+import { CreateGroupComponent } from './group/create-group/create-group.component';
 
 export const routes: Routes = [{
     path: '',
@@ -29,6 +30,11 @@ export const routes: Routes = [{
     path: 'userdetails',
     component:UserDetailsComponent,
     title: 'User Dashboard'
+  },
+  {
+    path: 'create-group',
+    component:CreateGroupComponent,
+    title: 'Create Group'
   }
 ];
 

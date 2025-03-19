@@ -1,10 +1,10 @@
-<div *ngIf="!dataStore.isUserLoggedIn"
+<!-- <div *ngIf="!dataStore.isUserLoggedIn"
     style="justify-content: center; width: 95%; display: flex; color: rgb(0, 0, 6); text-decoration:underline;">
     <a routerLink="/login">Click here to login</a>
-</div>
+</div> -->
 
-<nav class="navbar" *ngIf="dataStore.isUserLoggedIn" (click)="this.goToDashboard()">
-    <div *ngIf="!logoutConfirmation" class="nav-left">
+<nav class="navbar" *ngIf="dataStore.isUserLoggedIn">
+    <div *ngIf="!logoutConfirmation" class="nav-left"  (click)="this.goToDashboard()">
       <span class="username">{{ userName }}</span>
       <span class="investment">Total Investment: ${{ totalInvestment }}</span>
     </div>

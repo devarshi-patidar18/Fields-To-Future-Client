@@ -18,7 +18,7 @@ export class AppComponent {
   constructor(public datastore:DataStoreService) {}
 
   ngOnInit(){
-    this.datastore.isUserLoggedIn = true;
+    // this.datastore.isUserLoggedIn = true;
   }
 
 }

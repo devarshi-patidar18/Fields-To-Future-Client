@@ -13,9 +13,11 @@
 </div>
 
 <div class="cta" id="bottom">
-    <h2>Go to Login Page</h2>
-    <button>Login</button>
-    <h2>Create New Fund Group</h2>
-    <button>Get Started</button>
+    <h2 *ngIf="!this.dataStore.isUserLoggedIn" >Go to Login Page</h2>
+    <button routerLink="/login" *ngIf="!this.dataStore.isUserLoggedIn">Login</button>
+    <h2 *ngIf="this.dataStore.isUserLoggedIn">Create New Fund Group</h2>
+    <button *ngIf="this.dataStore.isUserLoggedIn" (click)="goToCreateGroup()">Create</button>
+    <h2 *ngIf="this.dataStore.isUserLoggedIn">Request to join a Fund Group</h2>
+    <button *ngIf="this.dataStore.isUserLoggedIn" (click)="goToJoinRequestFundGroup()">Create</button>
 </div>
 </div>
