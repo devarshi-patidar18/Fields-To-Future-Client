@@ -20,6 +20,14 @@ body {
     /* mask: radial-gradient(34px at top left, #0000 100%, #000); */
 
 }
+
+.datas div{
+    overflow: scroll;
+    height: auto;
+    max-height: 250px;
+}
+
+
 .hero h1 {
     color: white;
 }

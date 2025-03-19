@@ -6,6 +6,7 @@ import { SignupComponent } from './common/signup/signup.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
 import { CreateGroupComponent } from './group/create-group/create-group.component';
 import { JoinGroupComponent } from './group/join-group/join-group.component';
+import { GroupDetailsComponent } from './group/group-details/group-details.component';
 
 export const routes: Routes = [{
   path: '',
@@ -38,6 +39,7 @@ export const routes: Routes = [{
   title: 'Create Group'
 },
 {path: 'join-group',component: JoinGroupComponent,title: 'Join Group'},
+{path: 'group-details',component: GroupDetailsComponent,title: 'Group Details'}
 ];
 
 export default routes;
