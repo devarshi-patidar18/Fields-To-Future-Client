@@ -1,1 +1,23 @@
-<p>user-details works!</p>
+<div class="home-container" style="font-size: 0.9em;">
+    <div class="hero">
+        <h1> Devarshi Patidar</h1>
+        <h2>Total Investment <h3 style="color: white;margin-top: 10px;">{{ 10000 | currency:'INR' }}</h3>
+        </h2>
+        <h2>Total Interest <h3 style="color: green;margin-top: 10px;">{{1200>0?"+":"-"}}{{ 1200 | currency:'INR' }}</h3>
+        </h2>
+        <p>Track contributions, expenses, and reports in one place.</p>
+        <button>Get Started &rarr;</button>
+        <app-quote [todaysQuote]='this.dataStore.getTodaysQuote()'></app-quote>
+    </div>
+
+    <!-- <div class="features">
+        <div class="feature-box">Easy Fund Tracking</div>
+        <div class="feature-box">Secure Transactions</div>
+        <div class="feature-box">Real-time Reports</div>
+    </div> -->
+
+    <div class="cta" id="bottom">
+        <h2>Request to join a Fund Group</h2>
+        <button>Create</button>
+    </div>
+</div>

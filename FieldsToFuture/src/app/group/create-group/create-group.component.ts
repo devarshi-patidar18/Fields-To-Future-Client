@@ -12,11 +12,11 @@ import { FormsModule } from '@angular/forms';
 export class CreateGroupComponent {
 
   groupname:string = '';
-  firstname:string = '';
-  lastname:string = '';
-  phone:string = '';
-  password:string = '';
-  confirmpassword:string = '';
+  village:string = '';
+  city:string = '';
+  district:string = '';
+  state:string = '';
+  country:string = 'India';
 
   onLogin() {    
   }

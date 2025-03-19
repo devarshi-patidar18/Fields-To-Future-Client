@@ -3,7 +3,10 @@
     <h1> Welcome</h1>
     <h2>Manage Your Group Funds Efficiently</h2>
     <p>Track contributions, expenses, and reports in one place.</p>
-    <button (click)="gettingStarted()">Get Started &rarr;</button>
+    <button *ngIf="!this.dataStore.isUserLoggedIn" (click)="gettingStarted()">Get Started &rarr;</button>
+    <button *ngIf="this.dataStore.isUserLoggedIn" (click)="goToDashBoard()">Go To Dashboard</button>
+    
+    <app-quote [todaysQuote]='this.dataStore.getTodaysQuote()'></app-quote>
 </div>
 
 <div class="features">
