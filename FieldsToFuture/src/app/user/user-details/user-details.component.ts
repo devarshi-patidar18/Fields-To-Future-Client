@@ -15,6 +15,17 @@ import { TransactionComponent } from "../transaction/transaction.component";
   styleUrl: './user-details.component.css',
 })
 export class UserDetailsComponent {
+adminoptions: any = [
+  {id: 1, name: 'Create Group'},
+  {id: 2, name: 'Add Memeber'},
+  {id: 3, name: 'Add Loan'},
+  {id: 4, name: 'Add Transaction'},
+  {id: 5, name: 'Add EMI'}
+
+];
+changeGroup($event: Event) {
+    console.log('Group Changed');
+}
 
   isMyGroupsAccordionOpen:boolean = false;
   isMyLoansAccordionOpen:boolean = false;

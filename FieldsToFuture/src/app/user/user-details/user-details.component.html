@@ -3,7 +3,16 @@
 
 
 
-        <h1> Devarshi Patidar</h1>
+        <!-- <div> -->
+            <h1 style="margin-bottom: 0;">{{this.dataStore.userDetails.firstname + " " + this.dataStore.userDetails.lastname}}</h1>
+        <h6 style="margin: 0;color: greenyellow;">{{this.dataStore.userDetails.role=='admin'?"Admin":""}}</h6>
+        <!-- </div> -->
+         
+        <h6 style="margin:10px 0 0 0;color: white;font-size: 1.2em;">Admin Options</h6>
+         <select class="dropdown-global-css" (change)="this.changeGroup($event)">
+            <option value="0">Options</option>
+            <option *ngFor="let op of adminoptions" [value]="op.id">{{op.name}}</option>
+        </select>
         <div class="features">
             <div class="feature-box">Total Investment <h4
                     style="color: green;bottom: 0;position: relative;margin-bottom: 0;">{{ 10000 | currency:'INR' }}

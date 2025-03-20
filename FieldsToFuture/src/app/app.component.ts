@@ -36,7 +36,8 @@ export class AppComponent {
         lastname: 'Patidar',
         email: '',
         password: 'password',
-        phone: '9753684208'        
+        phone: '9753684208',
+        role:'admin'       
       }
     }
     else{
