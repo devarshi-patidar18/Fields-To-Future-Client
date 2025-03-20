@@ -34,33 +34,33 @@ body {
 .features {
     display: flex;
     justify-content: space-around;
-    padding: 30px;
-    background-color: white;
+    padding: 15px;
+    /* background-color: white; */
     flex-wrap: wrap;
     border-image-slice: 30%;
 }
 
 .feature-box {
     width: 30%;
-    padding: 20px;
-    background-color: #764818;
-    color: white;
+    padding: 20px 10px;
+    background-color: white;
+    color: black;
     text-align: center;
     border-radius: 10px;
     margin: 10px;
     flex-grow: 1;
-    clip-path: polygon(7% 0%, 100% 0%, 91% 72%, 91% 102%, 14% 100%, 1% 50%);
+    /* clip-path: polygon(7% 0%, 100% 0%, 91% 72%, 91% 102%, 14% 100%, 1% 50%); */
     font-size: 1.25em;
+    box-shadow: 5px 5px 5px #e0dfdfda;
 }
 
-.feature-box:hover{
+/* .feature-box:hover{
     width: 35%;
     height: 100px;
     box-shadow: 5px 5px 5px #e0dfdfda;
     transition: all 0.3s ease;
     font-size: 1.35em;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
-}
+} */
 
 
 .cta {

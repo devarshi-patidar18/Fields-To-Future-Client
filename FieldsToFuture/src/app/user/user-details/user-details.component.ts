@@ -16,15 +16,30 @@ import { TransactionComponent } from "../transaction/transaction.component";
 })
 export class UserDetailsComponent {
 
-  isMyGroupsOpen:boolean = false;
+  isMyGroupsAccordionOpen:boolean = false;
+  isMyLoansAccordionOpen:boolean = false;
+  isTransactionsAccordionOpen:boolean = false;
+  isMyEmisAccordionOpen:boolean = false;
 
   constructor(public dataStore:DataStoreService){}
 
   todayDate:Date = new Date();
 
   openMyGroups() {
-    this.isMyGroupsOpen = !this.isMyGroupsOpen;
+    this.isMyGroupsAccordionOpen = !this.isMyGroupsAccordionOpen;
     }
+
+  openMyLoans() {
+    this.isMyLoansAccordionOpen = !this.isMyLoansAccordionOpen;
+  }
+
+  openTransactions() {
+    this.isTransactionsAccordionOpen = !this.isTransactionsAccordionOpen;
+  }
+
+  openMyEmis() {
+    this.isMyEmisAccordionOpen = !this.isMyEmisAccordionOpen;
+  }
 
   
 }

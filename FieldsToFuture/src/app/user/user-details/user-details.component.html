@@ -1,10 +1,35 @@
 <div class="home-container" style="font-size: 0.9em;">
     <div class="hero">
+
+
+
         <h1> Devarshi Patidar</h1>
-        <h2>Total Investment <h3 style="color: white;margin-top: 10px;">{{ 10000 | currency:'INR' }}</h3>
-        </h2>
-        <h2>Total Interest <h3 style="color: green;margin-top: 10px;">{{1200>0?"+":"-"}}{{ 1200 | currency:'INR' }}</h3>
-        </h2>
+        <div class="features">
+            <div class="feature-box">Total Investment <h4
+                    style="color: green;bottom: 0;position: relative;margin-bottom: 0;">{{ 10000 | currency:'INR' }}
+                </h4>
+            </div>
+            <div class="feature-box">Total Interest <h4
+                    style="color: green;bottom: 0;position: relative;margin-bottom: 0;">{{1200>0?"+":"-"}}{{ 1200 |
+                    currency:'INR' }}</h4>
+            </div>
+            <div class="feature-box">Monthly EMI <h4
+                    style="color: red;bottom: 0;position: relative;margin-bottom: 0;">{{ 10000 |
+                    currency:'INR' }}
+                </h4>
+            </div>
+
+            <div class="feature-box">Monthly Investment<h4
+                    style="color: green;bottom: 0;position: relative;margin-bottom: 0;">{{ 10000 | currency:'INR' }}
+                </h4>
+            </div>
+
+            <div class="feature-box">Total Loan<h4
+                    style="color: red;bottom: 0;position: relative;margin-bottom: 0;">{{ 70000 | currency:'INR' }}
+                </h4>
+            </div>
+
+        </div>
         <p>Track contributions, expenses, and reports in one place.</p>
         <!-- <button>Get Started &rarr;</button> -->
         <app-quote [todaysQuote]='this.dataStore.getTodaysQuote()' [date]="todayDate"></app-quote>
@@ -12,24 +37,24 @@
 
 
     <div class="hero datas">
-        <button (click)="openMyGroups()">My Groups<i *ngIf="!this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
-                class="far fa-arrow-alt-circle-down fa-lg"></i>
-            <i *ngIf="this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
+        <button (click)="openMyGroups()">My Groups<i *ngIf="!this.isMyGroupsAccordionOpen"
+                style="margin-top: 10px;float: right;" class="far fa-arrow-alt-circle-down fa-lg"></i>
+            <i *ngIf="this.isMyGroupsAccordionOpen" style="margin-top: 10px;float: right;"
                 class="far fa-times-circle fa-lg"></i></button>
 
-        <div *ngIf="this.isMyGroupsOpen" style="margin-top: 5px;">
+        <div *ngIf="this.isMyGroupsAccordionOpen" style="margin-top: 5px;">
             <app-group-card></app-group-card>
 
         </div>
     </div>
 
     <div class="hero datas">
-        <button (click)="openMyGroups()">My Loans<i *ngIf="!this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
-                class="far fa-arrow-alt-circle-down fa-lg"></i>
-            <i *ngIf="this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
+        <button (click)="openMyLoans()">My Loans<i *ngIf="!this.isMyLoansAccordionOpen"
+                style="margin-top: 10px;float: right;" class="far fa-arrow-alt-circle-down fa-lg"></i>
+            <i *ngIf="this.isMyLoansAccordionOpen" style="margin-top: 10px;float: right;"
                 class="far fa-times-circle fa-lg"></i></button>
 
-        <div *ngIf="this.isMyGroupsOpen" style="margin-top: 5px;">
+        <div *ngIf="this.isMyLoansAccordionOpen" style="margin-top: 5px;">
             <app-group-card></app-group-card>
             <app-group-card></app-group-card>
             <app-group-card></app-group-card>
@@ -39,13 +64,14 @@
         </div>
     </div>
 
+    <!-- Transactions Starts -->
     <div class="hero datas">
-        <button (click)="openMyGroups()">My Transactions<i *ngIf="!this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
-                class="far fa-arrow-alt-circle-down fa-lg"></i>
-            <i *ngIf="this.isMyGroupsOpen" style="margin-top: 10px;float: right;"
+        <button (click)="openTransactions()">My Transactions<i *ngIf="!this.isTransactionsAccordionOpen"
+                style="margin-top: 10px;float: right;" class="far fa-arrow-alt-circle-down fa-lg"></i>
+            <i *ngIf="this.isTransactionsAccordionOpen" style="margin-top: 10px;float: right;"
                 class="far fa-times-circle fa-lg"></i></button>
 
-        <div *ngIf="this.isMyGroupsOpen" style="margin-top: 5px;">
+        <div *ngIf="this.isTransactionsAccordionOpen" style="margin-top: 5px;">
             <app-transaction></app-transaction>
             <app-transaction></app-transaction>
             <app-transaction></app-transaction>
@@ -55,12 +81,29 @@
             <app-transaction></app-transaction>
         </div>
     </div>
+    <!-- Transactions Ends -->
 
-    <!-- <div class="features">
-        <div class="feature-box">Easy Fund Tracking</div>
-        <div class="feature-box">Secure Transactions</div>
-        <div class="feature-box">Real-time Reports</div>
-    </div> -->
+    <!-- EMI starts -->
+    <div class="hero datas">
+        <button (click)="openTransactions()">My EMIs<i *ngIf="!this.isTransactionsAccordionOpen"
+                style="margin-top: 10px;float: right;" class="far fa-arrow-alt-circle-down fa-lg"></i>
+            <i *ngIf="this.isTransactionsAccordionOpen" style="margin-top: 10px;float: right;"
+                class="far fa-times-circle fa-lg"></i></button>
+
+        <div *ngIf="this.isTransactionsAccordionOpen" style="margin-top: 5px;">
+            <app-transaction></app-transaction>
+            <app-transaction></app-transaction>
+            <app-transaction></app-transaction>
+            <app-transaction></app-transaction>
+            <app-transaction></app-transaction>
+            <app-transaction></app-transaction>
+            <app-transaction></app-transaction>
+        </div>
+    </div>
+    <!-- EMI Ends -->
+
+
+
 
     <div class="cta" id="bottom">
         <h2>Request to join a Fund Group</h2>
