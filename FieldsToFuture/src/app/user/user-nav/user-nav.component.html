@@ -4,20 +4,46 @@
 </div> -->
 
 <nav class="navbar" *ngIf="dataStore.isUserLoggedIn">
-    <div *ngIf="!logoutConfirmation" class="nav-left"  (click)="this.goToDashboard()">
-      <span class="username">{{ userName }}</span>
-      <span class="investment">Total Investment: ${{ totalInvestment }}</span>
+  <div *ngIf="!logoutConfirmation" class="nav-left" (click)="this.goToDashboard()">
+    <span class="investment"><img style="width: 50px;height: 50px;border-radius: 50%;"
+        src="../../../assets/user_img.jpg"></span>
+    <div style="width: 200px;">
+      <div>
+        <span class="username">{{ this.dataStore.userDetails.firstname }}{{" "}} {{ this.dataStore.userDetails.lastname }}
+        </span>
+
+      </div>
+      <div style="margin-top: 5px;">
+        <span class="username">Contact: 9753684208</span>
+      </div>
+      <div style="margin-top: 5px;max-width: 200px;">
+        <span class="username">Karondiya Khurd, Khargone, MP, 451220</span>
+      </div>
     </div>
-    <div *ngIf="!logoutConfirmation" class="nav-right">
-      <!-- <button (click)="goToDashboard()">Dashboard</button> -->
-      <button class="logout" (click)="this.logoutConfirmation=true"><i class="fas fa-sign-out-alt"></i></button>
-    </div>
-    <div *ngIf="logoutConfirmation" style="justify-content: center;display: flex;">
-        <span style="width: 170px;">Do you realy want to logout?</span>
-        <!-- <span >Yes</span> -->
-        <button class="logout" style="padding: 0;width: 70px;margin-right: 5px;" (click)="this.islogout=true;logout()">Yes</button>
-        <!-- <span >No</span> -->
-        <button class="logout" style="padding: 0;width: 70px;" (click)="this.logoutConfirmation=false">No</button>
-    </div>
-  </nav>
-  
+    <!-- <span class="investment">Total Investment: {{ totalInvestment | currency:'INR'}}</span> -->
+    <!-- <span class="investment">Welcome . . . </span> -->
+  </div>
+
+  <!-- Edit Starts -->
+  <div *ngIf="!logoutConfirmation" class="nav-right">
+    <!-- <button (click)="goToDashboard()">Dashboard</button> -->
+    <button class="logout" (click)="this.editUserDetails()"><i class="fas fa-edit"></i></button>
+  </div>
+  <!-- Edit Ends -->
+
+  <div *ngIf="!logoutConfirmation" class="nav-right" style="margin-left: 5px;">
+    <!-- <button (click)="goToDashboard()">Dashboard</button> -->
+    <button class="logout" (click)="this.logoutConfirmation=true"><i class="fas fa-sign-out-alt"></i></button>
+  </div>
+
+  <!-- Logout Confirmation Starts -->
+  <div *ngIf="logoutConfirmation" style="justify-content: center;display: flex;">
+    <span style="width: 170px;">Do you realy want to logout?</span>
+    <!-- <span >Yes</span> -->
+    <button class="logout" style="padding: 0;width: 70px;margin-right: 5px;"
+      (click)="this.islogout=true;logout()">Yes</button>
+    <!-- <span >No</span> -->
+    <button class="logout" style="padding: 0;width: 70px;" (click)="this.logoutConfirmation=false">No</button>
+  </div>
+  <!-- Logout Confirmation Ends -->
+</nav>

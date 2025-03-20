@@ -7,14 +7,7 @@ export class DataStoreService {
 
   isUserLoggedIn: boolean = false;
   userDetails:any = {
-    name: 'John Doe',
-    email: '',
-    phone: '',
-    address: '',
-    city: '',
-    state: '',
-    country: '',
-    zip: '',
+    
   }
 
   constructor() { }

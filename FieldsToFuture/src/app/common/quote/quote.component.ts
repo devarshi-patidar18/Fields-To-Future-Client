@@ -12,9 +12,9 @@ import { Component, Input } from '@angular/core';
 export class QuoteComponent {
   @Input() todaysQuote:any = '';
   @Input() date:Date = new Date();
-
+  currentMonth:number = this.date.getMonth() +1;
   constructor(private datePipe:DatePipe) {}
 
-  todayDate:string = this.date.getDate().toString() + '-' +  this.datePipe.transform((this.date.getMonth() + 1).toString(),"MMMM") + '-' + this.date.getFullYear().toString(); 
+  todayDate:string = this.date.getDate().toString() + '-' +  this.currentMonth + '-' + this.date.getFullYear().toString(); 
   // + '/' + (this.date.getMonth() + 1) + '/' + this.date.getFullYear().toString().substr(2,2);
 }

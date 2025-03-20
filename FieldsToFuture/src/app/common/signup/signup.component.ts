@@ -1,17 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { DataStoreService } from '../../services/data-store.service';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [RouterLink,RouterOutlet,CommonModule,FormsModule],
+  imports: [RouterLink,CommonModule,FormsModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
+  
   username: string = '';
   password: string = '';
   firstname: string = '';
@@ -19,19 +20,25 @@ export class SignupComponent {
   email: string = '';
   phone: string = '';
   confirmpassword: string = '';
+  user: any = {};
 
-  constructor(private datastore:DataStoreService) {}
+  constructor(public datastore:DataStoreService,public router:Router) {}
   
     ngOnInit(){
-      this.datastore.isUserLoggedIn = true;
+      if(this.datastore.isUserLoggedIn){
+        this.user = this.datastore.userDetails;
+      }
     }
 
-  onLogin() {
-    // Simulating a simple login function. You can replace this with an actual authentication service.
-    if (this.username === 'user' && this.password === 'password') {
-      alert('Login Successful!');
-    } else {
-      alert('Invalid Username or Password');
+  rigesterUser() {
+    console.log(this.user.profilepic);
+    if(this.datastore.isUserLoggedIn){
+      alert('User Updated Successfully!');
+      this.router.navigate(['/userdetails']);
+    }
+    else{
+      alert('User Registered Successfully!');
+      this.router.navigate(['/login']);
     }
   }
 }
