@@ -1,7 +1,32 @@
-<div class="login-container">
-    <div class="login-card">
-        <h2 class="login-title">{{this.datastore.isUserLoggedIn?"Edit":"Rigester!"}}</h2>
+<div class="form-container">
+    <div class="form-card">
+        <h2 class="form-title">{{this.datastore.isUserLoggedIn?"Edit":"Rigester!"}}</h2>
+        
         <form (ngSubmit)="rigesterUser()" #registerForm="ngForm">
+            <div class="upload-container input-group">
+                <!-- <label for="profilepic">Profile Picture</label> -->
+
+                <!-- Preview the uploaded image -->
+                <div *ngIf="previewUrl" class="preview">
+                    <img [src]="previewUrl" alt="Profile Preview">
+                </div>
+
+                <label *ngIf="!profilePicAvailable" class="custom-file-upload">
+                    Upload
+                    <input type="file" (change)="onFileSelected($event)" accept="image/*" hidden>
+                    <i class="far fa-edit"></i>
+                   
+                </label>
+                <label style="color: red;" *ngIf="profilePicAvailable" class="custom-file-upload">
+                    Discard
+                    <i (click)="deleteProfilePic()" class="fas fa-trash-can"
+                        style="color: red;"></i>
+                        
+                </label>
+
+
+            </div>
+
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" [(ngModel)]="username" name="username" placeholder="User Name"
@@ -31,11 +56,13 @@
                 <input type="password" id="confirmpassword" [(ngModel)]="confirmpassword" name="confirmpassword"
                     required>
             </div>
-            <div class="input-group">
+            <!-- <div class="input-group">
                 <label for="profilepic">Profile Picture</label>
                 <input type="file" id="profilepic" [(ngModel)]="user.profilepic" name="profilepic"
                     accept="image/*" >
-            </div>
+            </div> -->
+
+
             <button type="submit" [disabled]="!registerForm.valid">Register</button>
         </form>
         <div class="" style="margin-top: 10px;">

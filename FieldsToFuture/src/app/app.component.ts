@@ -37,7 +37,9 @@ export class AppComponent {
         email: '',
         password: 'password',
         phone: '9753684208',
-        role:'admin'       
+        role:'admin',
+        profilePicName:'',
+        // profilePicName:'user_img.jpg'       
       }
     }
     else{

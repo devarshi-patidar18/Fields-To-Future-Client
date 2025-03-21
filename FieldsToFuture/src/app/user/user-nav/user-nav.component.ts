@@ -14,6 +14,8 @@ export class UserNavComponent {
 
   @Input() userName: string = 'User';
   @Input() totalInvestment: number = 0;
+  @Input() profilePicName:string = '';
+  // profilePicPath:string = '../../../assets/'+this.profilePicName!=''?this.profilePicName:'default_user_img.avif';
   logoutConfirmation: boolean = false;
   islogout: boolean = false;
   isUserEdit: boolean = false;
