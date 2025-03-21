@@ -1,0 +1,6 @@
+.hero{
+    transform: translate(0px, -197px);
+    height: 586px;
+    position: relative;
+    z-index: 1000;
+}
