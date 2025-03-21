@@ -1,0 +1,26 @@
+<div class="hero">
+
+    <div class="input-group">
+        <input type="text"  (keypress)="searchKeyPress($event)" [(ngModel)]="searchInput" placeholder="Search. . . ">
+    </div>
+
+    <app-search-card [searchedData]="this.searchedData" [enteredText]="searchInput"></app-search-card>
+   
+    <div class="loader-container">
+        
+        <div *ngIf="this.searchInput!='' && this.searchedData?.length==0" class="magnifier"></div>
+        <div class="blocks">
+          <div class="block" style="animation-delay: 0s;">S</div>
+          <div class="block" style="animation-delay: 0.1s;">E</div>
+          <div class="block" style="animation-delay: 0.2s;">A</div>
+          <div class="block" style="animation-delay: 0.3s;">R</div>
+          <div class="block" style="animation-delay: 0.4s;">C</div>
+          <div class="block" style="animation-delay: 0.5s;">H</div>
+          <div class="block" style="animation-delay: 0.6s;">I</div>
+          <div class="block" style="animation-delay: 0.7s;">N</div>
+          <div class="block" style="animation-delay: 0.8s;">G</div>
+        </div>
+      </div>
+      
+
+</div>

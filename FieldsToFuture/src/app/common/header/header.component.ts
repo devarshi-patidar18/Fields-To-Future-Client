@@ -15,7 +15,7 @@ export class HeaderComponent {
   isMobile: boolean = false;
   menuVisible: boolean = false;
   isScrolled: boolean = false;
-  searchPage: boolean = false;
+  // searchPage: boolean = false;
   searchPageActive: boolean = false;
 
   ngOnInit(): void {
@@ -24,14 +24,14 @@ export class HeaderComponent {
     }
   }
 
-  showDialog() {
+  showSearch() {
     this.searchPageActive = true;
   }
 
-  searchGlobal(event: any): void {
-    this.searchPage = true;
-    console.log(event.target.value);
-  }
+  // searchGlobal(event: any): void {
+  //   this.searchPage = true;
+  //   console.log(event.target.value);
+  // }
 
   @HostListener('window:resize', ['$event'])
   onResize(event?: Event): void {

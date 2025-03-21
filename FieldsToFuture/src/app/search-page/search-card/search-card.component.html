@@ -1,0 +1,15 @@
+
+
+<nav *ngFor="let tab of searchedData" class="navbar" style="margin-bottom: 5px" routerLink="/group-details">
+    
+    <div class="nav-left">
+        <span  class="username">{{tab.header}}</span>
+        <span  class="username">{{tab.name}}</span>
+        <span  class="username">{{tab.village}}</span>
+    </div>
+    <!-- <div class="nav-right">
+        <button class="logout">
+            <i class="fas fa-user-shield" style="color: #5fc63a;"></i>
+        </button>
+    </div> -->
+</nav>

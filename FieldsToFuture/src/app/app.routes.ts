@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './common/home/home.component';
 import { LoginComponent } from './common/login/login.component';
-import { SearchpageComponent } from './common/searchpage/searchpage.component';
+import { SearchpageComponent } from './search-page/search-main-page/searchpage.component';
 import { SignupComponent } from './common/signup/signup.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
 import { CreateGroupComponent } from './group/create-group/create-group.component';
