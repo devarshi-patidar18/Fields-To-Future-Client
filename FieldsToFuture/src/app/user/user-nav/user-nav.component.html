@@ -8,7 +8,7 @@
     
     <div style="width: 200px;">
       <div>
-        <span class="username">{{ this.dataStore.userDetails.firstname }}{{" "}} {{ this.dataStore.userDetails.lastname }}
+        <span class="username">{{ this.userDetails?.firstname }}{{" "}} {{ this.userDetails?.lastname }}
         </span>
 
       </div>
@@ -21,7 +21,7 @@
     </div>
 
     <span class="investment"><img class="user-nav-profile-pic"
-      [src]="'../assets/'+this.profilePicName" onerror="this.src='assets/default_user_img.avif';"></span>
+      src={{this.profilePicName}}></span>
     <!-- <span class="investment">Total Investment: {{ totalInvestment | currency:'INR'}}</span> -->
     <!-- <span class="investment">Welcome . . . </span> -->
   </div>

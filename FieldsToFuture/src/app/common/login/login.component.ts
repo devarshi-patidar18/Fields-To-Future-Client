@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Inject, PLATFORM_ID} from '@angular/core';
 
 import { CommonModule, DatePipe } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
@@ -18,7 +18,7 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private datastore:DataStoreService,private router:Router,public datePipe:DatePipe) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: object,private datastore:DataStoreService,private router:Router,public datePipe:DatePipe) {}
 
   ngOnInit(){
     // this.datastore.isUserLoggedIn = true;
@@ -32,7 +32,7 @@ export class LoginComponent {
       localStorage.setItem("loggedInUser", this.username);
       // const logInTime = new Date().getTime();
       localStorage.setItem("logInTime", new Date().getTime().toString());
-      
+      // window.location.href("/");
       this.router.navigate(['/userdetails']);
     } else {
       alert('Invalid Username or Password');

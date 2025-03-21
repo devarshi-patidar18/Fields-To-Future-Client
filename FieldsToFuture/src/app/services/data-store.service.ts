@@ -6,11 +6,20 @@ import { Injectable } from '@angular/core';
 export class DataStoreService {
 
   isUserLoggedIn: boolean = false;
-  userDetails:any = {
-    
-  }
 
   constructor() { }
+
+  userDetails:any = {
+    username: 'dp123',
+    firstname: 'Devarshi',
+    lastname: 'Patidar',
+    email: '',
+    password: 'password',
+    phone: '9753684208',
+    role:'admin',
+    // profilePicName:'',
+    profilePicName:'user_img.jpg'       
+  }
 
   moneySavingQuotes: any = [
     { quote: "ज्ञान में निवेश सबसे अच्छा ब्याज देता है।", author: "बेंजामिन फ्रैंकलिन" },

@@ -68,7 +68,7 @@ export class SignupComponent {
 
   deleteProfilePic() {
     this.profilePicAvailable = false;
-    this.previewUrl = this.userDummyInformation.profilePicName!=''?"../assets/"+ this.userDummyInformation.profilePicName:
-    "../assets/default_user_img.avif";
+    this.previewUrl = this.userDummyInformation.profilePicName!=''?"../../../assets/"+ this.userDummyInformation.profilePicName:
+    "../../../assets/default_user_img.avif";
   }
 }

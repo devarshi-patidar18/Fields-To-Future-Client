@@ -31,8 +31,27 @@ changeGroup($event: Event) {
   isMyLoansAccordionOpen:boolean = false;
   isTransactionsAccordionOpen:boolean = false;
   isMyEmisAccordionOpen:boolean = false;
+  userDetails:any = {
+    username: 'dp123',
+    firstname: 'Devarshi',
+    lastname: 'Patidar',
+    email: '',
+    password: 'password',
+    phone: '9753684208',
+    role:'admin',
+    // profilePicName:'',
+    profilePicName:'user_img.jpg'       
+  }
 
   constructor(public dataStore:DataStoreService){}
+
+  ngOnInit(){
+    // if(localStorage.getItem('loggedInUser')==='dp123'){
+    // console.log(this.userDetails)
+    // console.log(this.dataStore.userDetails);
+    //   this.userDetails = this.dataStore.userDetails;
+    // }
+  }
 
   todayDate:Date = new Date();
 

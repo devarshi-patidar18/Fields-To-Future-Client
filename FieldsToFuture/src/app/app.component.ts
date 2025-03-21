@@ -30,17 +30,7 @@ export class AppComponent {
 
     // If user is already logged in
     if (this.datastore.isUserLoggedIn) {
-      this.datastore.userDetails = {
-        username: 'dp123',
-        firstname: 'Devarshi',
-        lastname: 'Patidar',
-        email: '',
-        password: 'password',
-        phone: '9753684208',
-        role:'admin',
-        profilePicName:'',
-        // profilePicName:'user_img.jpg'       
-      }
+      // this.
     }
     else{
       this.datastore.userDetails = {};
