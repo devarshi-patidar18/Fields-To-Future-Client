@@ -7,10 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { DataStoreService } from './services/data-store.service';
 import { UserNavComponent } from './user/user-nav/user-nav.component';
 import { isPlatformBrowser } from '@angular/common';
+import { FooterComponent } from "./common/footer/footer.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CommonModule, RouterLink, FormsModule, UserNavComponent],
+  imports: [RouterOutlet, HeaderComponent, CommonModule, RouterLink, FormsModule, UserNavComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
