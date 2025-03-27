@@ -5,8 +5,8 @@
 
 <nav class="navbar" *ngIf="dataStore.isUserLoggedIn">
   <div *ngIf="!logoutConfirmation" class="nav-left" (click)="this.goToDashboard()">
-    
-    <div style="width: 200px;">
+
+    <div style="width: 200px;position: relative;top: 30px;display: grid;gap: 10px;">
       <div>
         <span class="username">{{ this.userDetails?.firstname }}{{" "}} {{ this.userDetails?.lastname }}
         </span>
@@ -20,22 +20,26 @@
       </div>
     </div>
 
-    <span class="investment"><img class="user-nav-profile-pic"
-      src={{this.profilePicName}}></span>
+    <span class="investment"><img class="user-nav-profile-pic" src={{this.profilePicName}}></span>
     <!-- <span class="investment">Total Investment: {{ totalInvestment | currency:'INR'}}</span> -->
     <!-- <span class="investment">Welcome . . . </span> -->
   </div>
   <!-- Edit Starts -->
-  <div *ngIf="!logoutConfirmation" class="nav-right">
+  <div  *ngIf="!logoutConfirmation" class="nav-right" style="display: flex;">
     <!-- <button (click)="goToDashboard()">Dashboard</button> -->
-    <button class="logout" (click)="this.editUserDetails()"><i class="fas fa-edit"></i></button>
+
+    <button class="edit" (click)="this.editUserDetails()"><i
+        class="fas fa-edit"></i></button>
+    <p style="color: white;position: absolute;
+    bottom: -33px;">Edit</p>
+    <button class="edit" (click)="this.logoutConfirmation=true"><i
+        class="fas fa-sign-out-alt"></i></button>
+    <p style="color: white;position: absolute;
+    bottom: -33px;left: 48px;">Logout</p>
   </div>
   <!-- Edit Ends -->
 
-  <div *ngIf="!logoutConfirmation" class="nav-right" style="margin-left: 5px;">
-    <!-- <button (click)="goToDashboard()">Dashboard</button> -->
-    <button class="logout" (click)="this.logoutConfirmation=true"><i class="fas fa-sign-out-alt"></i></button>
-  </div>
+
 
   <!-- Logout Confirmation Starts -->
   <div *ngIf="logoutConfirmation" style="justify-content: center;display: flex;">

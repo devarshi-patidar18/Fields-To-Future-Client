@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { UserNavComponent } from "../../user/user-nav/user-nav.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterOutlet,FormsModule],
+  imports: [CommonModule, RouterLink, RouterOutlet, FormsModule, UserNavComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -17,6 +18,7 @@ export class HeaderComponent {
   isScrolled: boolean = false;
   // searchPage: boolean = false;
   searchPageActive: boolean = false;
+  isUserNavCardOpen:boolean = false;
 
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
@@ -51,6 +53,10 @@ export class HeaderComponent {
 
   toggleMenu(): void {
     this.menuVisible = !this.menuVisible;
+  }
+
+  openUserNavCard(){
+    this.isUserNavCardOpen = true;
   }
 
 }
