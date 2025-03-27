@@ -1,6 +1,6 @@
 .hero {
-    transform: translate(0px, -205px);
-    height: 586px;
+    /* transform: translate(0px, -205px); */
+    /* height: 586px; */
     position: relative;
     z-index: 1000;
 }
@@ -14,7 +14,7 @@
     justify-content: center;
     overflow: hidden;
     top: 100px;
-    left: 10%;
+    left: 0%;
 }
 
 .magnifier {
