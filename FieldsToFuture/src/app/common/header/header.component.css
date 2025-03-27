@@ -25,8 +25,9 @@
     align-items: center;
 
     .logo {
-      height: 60px;
+      height: 56px;
       transition: transform 0.4s ease;
+      border-radius: 50%;
     }
   }
 
@@ -106,7 +107,7 @@
 
       li {
         list-style: none;
-        box-shadow: 4px 4px black;
+        box-shadow: 4px 4px #7981ea;
 
         a {
           color: black;
@@ -117,11 +118,22 @@
   }
 
   &.scrolled {
-    padding: 10px 30px;
+    padding: 10px 25px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 44px;
     border-radius: 20px;
+
+    .textLogoScrolled {
+      width: 150px;
+      height: 25px;
+    }
+
+    .logoScrolled {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
 
     .logo {
       transform: scale(0.8);
@@ -142,6 +154,17 @@
   }
 }
 
+.logoScrolled {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  
+}
+
+.textLogoScrolled {
+  width: 160px;
+  height: 30px;
+}
 
 
 @media screen and (max-width: 768px) {
