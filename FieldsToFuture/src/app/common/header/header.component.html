@@ -1,7 +1,12 @@
-<app-user-nav style="    width: 330px;
-position: absolute;
-left: 3px;
-top: 20px;" *ngIf="isUserNavCardOpen" [userName]="'Devarshi Patidar'" [totalInvestment]="500000"></app-user-nav>
+<app-user-nav style="top: 50px;position:relative" *ngIf="isUserNavCardOpen" [userName]="'Devarshi Patidar'" [totalInvestment]="500000"></app-user-nav>
+<i style="top: -148px;
+left: 94%;
+background-color: white;
+position: relative;
+border-radius: 50%;
+width: 20px;
+height: 18px;
+text-align: center;" class="fas fa-close lg" (click)="isUserNavCardOpen=false"></i>
 <div class="header" [ngClass]="{'scrolled': isScrolled}" *ngIf="!isUserNavCardOpen">
 
   <div class="logo-container" (click)="openUserNavCard()">

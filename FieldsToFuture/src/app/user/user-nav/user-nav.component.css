@@ -2,12 +2,12 @@
   padding: 10px 10px;
   background: #3932bc;
   color: white;
-  width: 100%;
-  position: relative;
+  /* width: 100%; */
+  /* position: relative; */
   z-index: 1000;
   font-size: 0.8em;
   border-radius: 5px;
-  top: 20px;
+  top: 60px;
 }
 
 .nav-left {
