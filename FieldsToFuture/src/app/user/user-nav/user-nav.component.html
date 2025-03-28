@@ -29,13 +29,10 @@
     <!-- <button (click)="goToDashboard()">Dashboard</button> -->
 
     <button class="edit" (click)="this.editUserDetails()"><i
-        class="fas fa-edit"></i></button>
-    <p style="color: white;position: absolute;
-    bottom: -33px;">Edit</p>
-    <button class="edit" (click)="this.logoutConfirmation=true"><i
-        class="fas fa-sign-out-alt"></i></button>
-    <p style="color: white;position: absolute;
-    bottom: -33px;left: 48px;">Logout</p>
+        class="fas fa-edit"></i>Edit</button>
+    
+    <button class="edit logout" (click)="this.logoutConfirmation=true"><i
+        class="fas fa-sign-out-alt"></i>Logout</button>
   </div>
   <!-- Edit Ends -->
 
@@ -43,12 +40,12 @@
 
   <!-- Logout Confirmation Starts -->
   <div *ngIf="logoutConfirmation" style="justify-content: center;display: flex;">
-    <span style="width: 170px;">Do you realy want to logout?</span>
+    <span style="width: 100%;">Do you realy want to logout?</span>
     <!-- <span >Yes</span> -->
-    <button class="logout" style="padding: 0;width: 70px;margin-right: 5px;"
+    <button class="edit" style="padding: 0;margin-right: 5px;"
       (click)="this.islogout=true;logout()">Yes</button>
     <!-- <span >No</span> -->
-    <button class="logout" style="padding: 0;width: 70px;" (click)="this.logoutConfirmation=false">No</button>
+    <button class="edit" style="padding: 0;" (click)="this.logoutConfirmation=false">No</button>
   </div>
   <!-- Logout Confirmation Ends -->
 </nav>

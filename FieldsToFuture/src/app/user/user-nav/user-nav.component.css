@@ -2,7 +2,7 @@
   padding: 10px 10px;
   background: #3932bc;
   color: white;
-  width: 331px;
+  /* width: 331px; */
   /* position: relative; */
   z-index: 1000;
   font-size: 0.8em;
@@ -16,9 +16,9 @@
 }
 
 .nav-right {
-  width: 30px;
-  position: relative;
-  left: 125px;
+  /* width: 30px; */
+  /* position: relative; */
+  /* left: 125px; */
   gap: 20px;
   margin-bottom: 15px;
 }
@@ -35,8 +35,8 @@ button:hover {
 }
 
 .logout {
-  background: rgb(245, 244, 244);
-  color: rgb(23, 1, 1);
+  background: red;
+  color: white;
   margin-top: 10px;
 }
 
@@ -44,10 +44,6 @@ button:hover {
   background: rgb(245, 244, 244);
   color: rgb(23, 1, 1);
   margin-top: 40px;
-}
-
-.logout:hover {
-  background: darkred;
 }
 
 .user-nav-profile-pic {
